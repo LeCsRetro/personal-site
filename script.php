@@ -53,8 +53,8 @@ class Style{
 	public $font;
 	public $firstColor;
 	public $secondColor;
-  public $textFirstColor;
-  public $dirBgHeader;
+  	public $textFirstColor;
+  	public $dirBgHeader;
 
 	public function __construct($font,$firstColor,$secondColor,$textFirstColor,$textSecondColor,$dirBgHeader){
             $this->font = $font;
