@@ -1,0 +1,414 @@
+html, body {
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, strong, b, i, em, ul, ol, li, nav, header, footer, section, a{
+	margin: 0;
+	padding: 0;
+}
+.right,#right{
+	float: right;
+}
+.left,#left{
+	float: left;
+}
+.none{
+	display: none;
+}
+header{
+    width: 100%;
+    height: 400px;
+    background-color: #F5F5F5;
+    background-position: center;
+    background-size: cover; 
+}
+.alertCookie{
+    width: 100%;
+    height: auto;
+    padding:3px 0;
+    text-align: center;
+    font-size: 9pt;
+    border-bottom: rgba(0, 0, 0, 0.6) 2px solid;
+}
+.aOpenCookies{
+    font-weight: 900;
+    cursor: pointer;
+}
+.bodyHeader{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+nav{
+    width: 100%;
+    max-width: 1300px;
+    margin: 20px 0;
+}
+nav ul {
+    float: right;
+}
+nav ul li{
+    float: left;
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 15pt;
+    font-weight: 300;
+}
+.infoAbout{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    height: 225px;
+}
+.photoUser{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+    background-size: cover;
+    background-position: center;
+}
+.infoUser{
+    float: left;
+    margin-left: 30px;
+    width: 30%;
+}
+.infoUser li{
+    list-style: none;
+    height: 50px;
+}
+.infoUser h1{font-weight: 700}
+.circle-infoUser{
+    float: left;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    margin-right: 8px;
+}
+.infoUser p{
+    line-height: 33px;
+    font-size: 14pt;
+    text-shadow: #000 1px 1px 1px
+}
+.skills{
+    float: left;
+    margin-left: 150px;
+    width: 25%;
+}
+.skills h1{margin-bottom: 20px;}
+.skills li{
+    list-style: none;
+    background: #f5f5f5;
+    width: auto;
+    float: left;
+    padding: 3px;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 0px;
+    -ms-box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 0px;
+    -o-box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 0px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    cursor: default;
+}
+.downPage{
+    font-size: 50pt !important;
+    margin: 0 auto;
+    display: block !important;
+    width: 58px;
+    cursor: pointer;
+    transition: .1s linear;
+    -webkit-transition: .1s linear;
+    -moz-transition: .1s linear;
+    -ms-transition: .1s linear;
+    -o-transition: .1s linear;
+}
+.downPage:hover{
+    font-size: 55pt !important;
+    width: 63px;
+}
+.experience{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.hExpe,.hPortf,.hContact{
+    font-weight: 700;
+    font-size: 24pt;
+    margin-top: 18px;
+}
+.bodyExpe{
+    width: 45%;
+    height: auto;
+    float: left;
+    margin: 25px 5% 25px 0;
+}
+#leftexp{
+    width: 70%;
+}
+#leftexp span{
+    display: block;
+}
+#leftexp blockquote{
+    margin: 5px 0 0 0;
+    font-size: 11pt;
+}
+#rightexp{
+    width: 30%;
+}
+#rightexp img{
+    max-width: 92%;
+    padding: 5px;
+}
+.portfolio{
+    width: 100%;
+    height: auto;
+    background-color: #F5F5F5;
+    float: left;
+    padding-bottom: 25px;
+}
+.bodyex,.bodyportf,.bodycontact{
+    width: 96%;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.oneProject{
+    width: 30%;
+    height: auto;
+    min-height: 200px;
+    margin-right: 3%;
+    margin-top: 25px;
+    float: left;
+}
+.monitorPrj{
+    width: 100%;
+    height: 156px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.oneProject h2{
+    text-align: center;
+    font-size: 17pt;
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.oneProject blockquote{
+    margin: 10px 0;
+    font-size: 11pt;
+}
+.contact{
+    width: 100%;
+    height: auto;
+    float: left;
+    padding-bottom: 25px;
+    background-color: #FBFBFB;
+}
+.contact form{
+    width: 50%;
+    float: left;
+}
+.contact form span{
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+}
+.contact form label{
+    width: 100%;
+    display: block;
+    color: #4CD5FF;
+    font-size: 16pt;
+}
+.contact form input,.contact form textarea{
+    width: 95%;
+    padding: 10px;
+    border: #F5F5F5 1px solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 13pt;
+}
+.contact form textarea{
+    max-width: 95%;
+    height: 150px;
+    max-height: 300px;
+}
+.inputsend{
+    float: right;
+    width: 100px !important;
+    cursor: pointer;
+    outline: none;
+}
+.errormail{
+    background: #DA0000;
+    padding: 10px;
+    width: 95% !important;
+    color: #FFF;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-align: center;
+    display: none !important;
+}
+.rightSide{
+    width: 45%;
+    float: right;
+}
+.rightSide p{font-size: 15pt}
+.social{margin-top: 50px}
+.social ul li{
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 2%;
+}
+footer{
+    width: 100%;
+    height: 30px;
+    background: rgb(22, 21, 26);
+    float: left;
+}
+footer p{
+    text-align: center;
+    color: #FFF;
+    font-size: 13pt;
+    margin-top: 6px;
+}
+footer p strong{font-size: 15pt}
+footer p a{text-decoration: none;}
+.cookies_message{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    display: none;
+}
+.body_cmess{
+    width: 50%;
+    height: auto;
+    background: #FFF;
+    margin: 9% auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+.body_cmess h1{
+    text-align: center;
+    font-size: 26pt;
+    font-weight: 600;
+    padding: 5px 0;
+}
+.body_cmess blockquote{
+    font-weight: 100;
+    font-size: 13pt;
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+        .body_cmess {width: 90%;}
+    .body_cmess h1{font-size: 22pt}
+    .body_cmess blockquote{margin: 5px}
+    nav {
+       width: 95%;
+       max-width: 1300px;
+       margin: 20px auto;
+    }
+    nav ul li{
+       font-size: 13pt;
+       font-weight: 300;
+       margin-right: 11px;
+    }
+    .infoAbout {
+       width: 95%;
+       margin: 10px;
+       height: 225px;
+    }
+    .photoUser {
+        width: 100px;
+        height: 100px;
+        margin-left: 0;
+        background-size: cover;
+    }
+    .infoUser{
+        float: right;
+        width: 55%;
+    }
+    .infoUser li {height: 25px;}
+    .infoUser li h1{font-size: 15pt;}
+    .circle-infoUser {
+       line-height: 20px;
+       width: 20px;
+       height: 20px;
+       font-size: 9pt;
+    }
+    .infoUser p {
+       line-height: 18px;
+       font-size: 11pt;
+    }
+    .skills {
+       margin-left: 0;
+       width: 96%;
+    }
+    .skills h1 {
+       font-size: 14pt;
+    }
+    .skills li{font-size: 8pt}
+    .downPage{opacity: 0}
+    .hExpe, .hPortf, .hContact{font-size: 20pt}
+    .bodyExpe {width: 100%;}
+    #leftexp {width: 100%;}
+    #leftexp blockquote{font-size: 9pt}
+    .oneProject {width: 100%;}
+    .oneProject blockquote{font-size: 9pt}
+    .rightSide {
+        width: 100%;
+       float: left;
+       margin-top: 20px;
+    }
+    .contact form{width: 95%}
+    .rightSide p {font-size: 11pt;}
+    .social ul li{    
+       width: 15px;
+       height: 15px;
+       line-height: 15px;
+       margin-right: 1%;
+    }
+    .monitorPrj img{opacity: 0}
+    
+}
