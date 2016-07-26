@@ -31,7 +31,7 @@ $DEFskills = 'HTML,CSS,PHP,Javascript,jQuery,vBulletin,MyBB,Linux,WIndows,C++,Ja
 /* CONTACTS || CONTATTI */
 /* EVERY VARIABLE IS OPTIONAL || OGNI VARIABILE È OPZIONALE */
 $DEFform = true; //do you want use an email contact form? || vuoi usare il form per il contatto email?
-$DEFemail = 'sancn@live.com'; //your email || la tua email
+$DEFemail = 'example@email.com'; //your email || la tua email
 $DEFaddress = '1600 Pennsylvania Avenue NW Washington, D.C. 20500 U.S.'; //your address || il tuo indirizzo
     /* YOU MUSTN'T WRITE SOCIAL URL LINK
       ES: DON'T http://facebook.com/usantoc
