@@ -2,8 +2,8 @@
 <h1>Personal Website</h1>
 
 This is a template for a personal web site. You can share your experiences, your works and your contacts. You don't need write a single line of code, because you "write" everything in first log, with file <strong>config.php</strong>.
-The template is wrote in PHP, and you can find (in file <strong>script.php</strong>) the script (constants, classes etc.). 
-The template is responsive; so you can view that in your mobile phone o tablet.
+The template is written in PHP, and you can find (in file <strong>script.php</strong>) the scripts (constants, classes etc.). 
+The template is responsive; so you can view that in your mobile phone or tablet.
 <h2>Featureas</h2>
 - Profile photo;
 - Personal info, like birthday, city or job;
