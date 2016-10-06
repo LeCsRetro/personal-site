@@ -1,19 +1,27 @@
 <?php 
-$conn = new mysqli("localhost","root","","git");
-			if ($conn->connect_error) {
-				$error = "Connection to the database failed.";
-			}
-define('NAME_WEBSITE','Website'); //Website name || Nome sito web 
-define('LANG_WEBSITE','en'); //Website language || Lingua sito web 
-define('DESCR_WEBSITE','Website description'); //Website description || Descrizione del sito 
+if(file_exists(dirname(__FILE__).'/connection.php')){
+     include 'connection.php';
+} else {
+	header('location: setup.php');
+}
+
+function get_var($conn, $var){
+	$get = $conn->query("SELECT value FROM cms_settings WHERE var = '{$var}' LIMIT 1");
+	$get_a = $get->fetch_assoc();
+	return $get_a['value'];
+}
+
+define('NAME_WEBSITE',get_var($conn, 'wname')); //Website name || Nome sito web 
+define('LANG_WEBSITE',get_var($conn, 'wlang')); //Website language || Lingua sito web 
+define('DESCR_WEBSITE',get_var($conn, 'wdescr')); //Website description || Descrizione del sito 
 
 /* STYLE WEBSITE || STILE DEL SITO */
-$DEFfont = 'Raleway'; //Font
-$DEFfirstColor = '#4CD5FF'; //First color || Colore principale
-$DEFsecondColor = '#00C3FF'; //Second color || Colore secondario
-$DEFtextFirstColor = '#000'; //text fisrt color || Colore testo primario
-$DEFtextSecondColor = '#FFF'; //text second color || Colore testo secondario
-$DEFdirBgHeader = 'https://static.pexels.com/photos/479/landscape-nature-sunset-trees.jpg'; //directory bg header
+$DEFfont = get_var($conn, 'sfont'); //Font
+$DEFfirstColor = get_var($conn, 'sfcolor'); //First color || Colore principale
+$DEFsecondColor = get_var($conn, 'sscolor'); //Second color || Colore secondario
+$DEFtextFirstColor = get_var($conn, 'sftcolor'); //text fisrt color || Colore testo primario
+$DEFtextSecondColor = get_var($conn, 'sstcolor'); //text second color || Colore testo secondario
+$DEFdirBgHeader = get_var($conn, 'sbg'); //directory bg header
 
 /* SHOW PAGES || MOSTRA PAGINA */
 $PAGexperience = true; //page experience || pagina esperienze
@@ -21,18 +29,18 @@ $PAGportfolio = true; //page portoflio || pagina portfolio
 $PAGcontact = true; //page contact || pagina contact
 
 /* USER INFO || INFO UTENTE */
-$DEFname = 'Santo Cariotti'; //name and surname || nome e cognome
-$DEFborn = '24/12/2000'; //birthday || data di nascita
-$DEFcity = 'San Francisco, CA'; //city || città
-$DEFjob = 'Web Developer'; //job || occupazione
-$DEFphoto = 'https://avatars0.githubusercontent.com/u/20584215'; //my photo || mia foto
-$DEFskills = 'HTML,CSS,PHP,Javascript,jQuery,vBulletin,MyBB,Linux,WIndows,C++,Java'; //skills || capacità
+$DEFname = get_var($conn, 'iname'); //name and surname || nome e cognome
+$DEFborn = get_var($conn, 'iborn'); //birthday || data di nascita
+$DEFcity = get_var($conn, 'icity'); //city || città
+$DEFjob = get_var($conn, 'ijob'); //job || occupazione
+$DEFphoto = get_var($conn, 'iphoto'); //my photo || mia foto
+$DEFskills = get_var($conn, 'iskills'); //skills || capacità
 
 /* CONTACTS || CONTATTI */
 /* EVERY VARIABLE IS OPTIONAL || OGNI VARIABILE È OPZIONALE */
 $DEFform = true; //do you want use an email contact form? || vuoi usare il form per il contatto email?
-$DEFemail = 'example@email.com'; //your email || la tua email
-$DEFaddress = '1600 Pennsylvania Avenue NW Washington, D.C. 20500 U.S.'; //your address || il tuo indirizzo
+$DEFemail = get_var($conn, 'cemail'); //your email || la tua email
+$DEFaddress = get_var($conn, 'caddress'); //your address || il tuo indirizzo
     /* YOU MUSTN'T WRITE SOCIAL URL LINK
       ES: DON'T http://facebook.com/usantoc
           DO usantoc
@@ -40,14 +48,14 @@ $DEFaddress = '1600 Pennsylvania Avenue NW Washington, D.C. 20500 U.S.'; //your 
       ES: NON FARLO http://facebook.com/usantoc
           FALLO usantoc
     */
-$DEFfacebook = 'usantoc'; //account facebook
-$DEFtwitter = 'usantoc'; //account twitter
-$DEFlinkedin = ''; //account linkedin
-$DEFyoutube = ''; //account youtube
-$DEFreddit = ''; //account reddit
-$DEFdeviantart = ''; //account deviantart
-$DEFgithub = 'usantoc'; //account github
-$DEFgoogleplus = ''; //account google+
+$DEFfacebook = get_var($conn, 'cfacebook'); //account facebook
+$DEFtwitter = get_var($conn, 'ctwitter'); //account twitter
+$DEFlinkedin = get_var($conn, 'clinkedin'); //account linkedin
+$DEFyoutube = get_var($conn, 'cyoutube'); //account youtube
+$DEFreddit = get_var($conn, 'creddit'); //account reddit
+$DEFdeviantart = get_var($conn, 'cdeviantart'); //account deviantart
+$DEFgithub = get_var($conn, 'cgithub'); //account github
+$DEFgoogleplus = get_var($conn, 'cgoogleplus'); //account google+
 
 class Style{
 	public $font;
@@ -130,4 +138,4 @@ class Contact{
     public function deviantart(){return $this->deviantart;}
     public function github(){return $this->github;}
     public function googleplus(){return $this->googleplus;}
-}?>
+}

@@ -1,8 +1,8 @@
 <?php
-if(file_exists('config.php')){
-	header('Location: config.php');
+if(!file_exists('connection.php')){
+	header('Location: setup.php');
 }
-include (__DIR__.'\script.php');
+include (dirname(__FILE__).'\script.php');
 $style = new style($DEFfont,$DEFfirstColor,$DEFsecondColor,$DEFtextFirstColor,$DEFtextSecondColor,$DEFdirBgHeader);
 $info = new info($DEFname,$DEFborn,$DEFcity,$DEFjob,$DEFphoto,$DEFskills);
 $contact = new contact($DEFemail,$DEFaddress,$DEFfacebook,$DEFtwitter,$DEFlinkedin,$DEFyoutube,$DEFreddit,$DEFdeviantart,$DEFgithub,$DEFgoogleplus);
